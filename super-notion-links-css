@@ -1,0 +1,79 @@
+:root {
+  --color-bg-default: #1a1a2e; /* Darker, modern background */
+  --color-text-default: #e0e0e0; /* Light, tech-inspired text color */
+  --header-color: #00f5d4; /* Futuristic teal for headers */
+  --header-shadow: 0 0 15px rgba(0, 245, 212, 0.8); /* Glow for headers */
+  --max-width: 700px !important;
+  --link-padding: 18px !important;
+  --link-border-radius: 20px !important;
+  --link-background: rgba(15, 23, 42, 0.7) !important; /* Glass effect */
+  --link-hover-background: rgba(31, 45, 78, 0.9) !important; /* Brighter on hover */
+  --link-backdrop-filter: blur(15px) !important;
+  --link-border: 1px solid rgba(255, 255, 255, 0.2) !important; /* Subtle border */
+  --link-color: #00f5d4 !important; /* Links in glowing teal */
+  --link-shadow: 0 8px 30px rgba(0, 245, 212, 0.3) !important; /* Soft shadow */
+  --link-hover-shadow: 0 15px 45px rgba(0, 245, 212, 0.5) !important; /* Elevated glow on hover */
+  --link-hover-translate: translate(0px, -3px) !important; /* Subtle lift effect */
+  --header-font: 'Poppins', sans-serif; /* Modern and clean font */
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background-size: 200% 200%;
+  animation: bgAnimation 10s ease infinite; /* Animated gradient */
+  color: var(--color-text-default);
+  font-family: var(--header-font);
+}
+
+@keyframes bgAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.notion-header__title {
+  color: var(--header-color) !important;
+  text-shadow: var(--header-shadow) !important;
+  font-size: 48px !important;
+  font-weight: bold;
+}
+
+.notion-collection-list__item {
+  background: var(--link-background) !important;
+  padding: var(--link-padding) !important;
+  margin-bottom: 20px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  color: var(--link-color) !important;
+  border-radius: var(--link-border-radius) !important;
+  border: var(--link-border) !important;
+  box-shadow: var(--link-shadow) !important;
+  backdrop-filter: var(--link-backdrop-filter) !important;
+  transition: var(--link-hover-shadow) 0.3s, var(--link-hover-translate) 0.3s;
+}
+
+.notion-collection-list__item:hover {
+  transform: var(--link-hover-translate) !important;
+  box-shadow: var(--link-hover-shadow) !important;
+  background: var(--link-hover-background) !important;
+}
+
+.super-footer, .super-navbar {
+  background: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(15px) !important;
+}
+
+.super-content {
+  padding: 20px !important;
+  text-align: center !important;
+}
+
+@media all and (max-width: 546px) {
+  .notion-header__title {
+    font-size: 36px !important;
+  }
+  .notion-collection-list__item {
+    padding: 15px !important;
+  }
+}
