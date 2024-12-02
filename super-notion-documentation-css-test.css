@@ -1,0 +1,124 @@
+:root {
+    --color-primary: linear-gradient(45deg, #1ca0f1, #ff00ff, #ad00ff) !important; /* Cyan, Pink, Purple gradient */
+    --cta-color-bg: #222 !important; /* Dark background for call-to-action */
+    --cta-color-text: #fff !important; /* Light text for contrast */
+    --cta-hover-bg: linear-gradient(45deg, #00ffff, #ff00ff, #a020f0) !important; /* Gradient for hover */
+    --color-text-default: #e0e0e0 !important; /* Light gray for default text */
+    --inline-code-bg-color: rgba(255, 255, 255, 0.05) !important; /* Subtle highlight */
+    --content-width: 1500px !important; /* Keep as-is */
+    --color-bg-default: #121212 !important; /* Deep dark background */
+    --color-ui-hover-bg: rgba(255, 255, 255, 0.05) !important; /* Subtle hover */
+    --color-border-default: #333 !important; /* Dark gray border */
+    --color-card-bg: #1a1a1a !important; /* Slightly lighter background for cards */
+    --transition: all 0.3s ease-in-out !important; /* Smooth transition */
+}
+
+body {
+    background: var(--color-bg-default);
+    color: var(--color-text-default);
+    font-family: 'Inter', sans-serif !important;
+    line-height: 1.6 !important;
+    margin: 0;
+}
+
+.super-navbar {
+    border-bottom: 1px solid var(--color-border-default) !important;
+    background: var(--color-card-bg) !important;
+    padding: 10px 20px !important;
+}
+
+.super-navbar__item {
+    padding: 10px 15px !important;
+    border-radius: 8px !important;
+    transition: var(--transition);
+}
+
+.super-navbar__item:hover {
+    background: var(--color-ui-hover-bg) !important;
+    color: var(--cta-color-text) !important;
+}
+
+.super-navbar__cta {
+    background: var(--cta-color-bg) !important;
+    color: var(--cta-color-text) !important;
+    border-radius: 50px !important;
+    padding: 10px 20px !important;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.super-navbar__cta:hover {
+    background: var(--cta-hover-bg) !important;
+    color: white !important;
+}
+
+.notion-page {
+    padding: 20px !important;
+    background: var(--color-card-bg) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4) !important;
+}
+
+.notion-page__title {
+    color: var(--color-text-default) !important;
+    font-size: 24px !important;
+    font-weight: bold !important;
+    margin-bottom: 20px !important;
+}
+
+.notion-quote {
+    border: 1px solid var(--color-border-default) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    padding: 15px !important;
+    border-radius: 10px !important;
+    color: var(--color-text-default) !important;
+}
+
+.notion-callout {
+    display: flex !important;
+    background: var(--color-card-bg) !important;
+    border-left: 4px solid var(--color-primary) !important;
+    padding: 15px !important;
+    border-radius: 10px !important;
+}
+
+.notion-callout__content .notion-link {
+    color: var(--color-primary) !important;
+    text-decoration: none !important;
+}
+
+.notion-callout__content .notion-link:hover {
+    text-decoration: underline !important;
+}
+
+.notion-table-of-contents__item {
+    color: var(--color-text-default) !important;
+    margin: 10px 0 !important;
+}
+
+.notion-table-of-contents__item:hover {
+    color: var(--color-primary) !important;
+}
+
+pre {
+    background: #1e1e1e !important;
+    color: #dcdcdc !important;
+    padding: 15px !important;
+    border-radius: 8px !important;
+}
+
+button, a {
+    background: var(--cta-color-bg);
+    color: var(--cta-color-text);
+    padding: 10px 20px;
+    border: 1px solid var(--color-border-default);
+    border-radius: 50px;
+    transition: var(--transition);
+}
+
+button:hover, a:hover {
+    background: var(--cta-hover-bg);
+    border-color: var(--cta-hover-bg);
+    color: white;
+}
+
